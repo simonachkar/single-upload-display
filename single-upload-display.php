@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Single Upload Display
  * Description: Upload a single image from the admin panel and display it on the front-end. Replaces the old one automatically.
- * Version: 1.2
+ * Version: 1.0
  * Author: Simon Achkar
  *
  * Prefix Reference:
