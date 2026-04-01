@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Single Upload Display
  * Description: Manage named upload slots and display each image with [single_upload_display tag="your-tag"]. Replaces the previous image per slot automatically.
- * Version: 2.0
+ * Version: 1.0
  * Author: Simon Achkar
  *
  * Prefix Reference:
@@ -13,9 +13,6 @@
 
 // Prevent direct file access
 if (!defined('ABSPATH')) exit; 
-
-// Legacy constant kept for backward compatibility with v1 shortcode usage
-define('SUD_OPTION_NAME', 'sud_uploaded_image_id');
 
 // Load CSS/JS in Admin area
 add_action('admin_enqueue_scripts', function ($hook) {
