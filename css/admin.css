@@ -1,9 +1,50 @@
-.sud-image-preview img {
-    max-width: 100%;
+/* ── Slot table ──────────────────────────────────────────────────────────── */
+.sud-slots-table {
+    max-width: 960px;
+}
+
+.sud-slots-table .sud-col-tag       { width: 120px; }
+.sud-slots-table .sud-col-shortcode { width: 260px; }
+.sud-slots-table .sud-col-preview   { width: 160px; }
+.sud-slots-table .sud-col-actions   { }
+
+.sud-slots-table code {
+    font-size: 12px;
+    word-break: break-all;
+}
+
+/* ── Thumbnail previews ──────────────────────────────────────────────────── */
+.sud-thumb {
+    max-width: 120px;
     height: auto;
-    margin-top: 10px;
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: 3px;
     background: #fafafa;
-  }
+    display: block;
+}
+
+.sud-no-image {
+    color: #999;
+}
+
+/* ── Inline action forms inside the table ───────────────────────────────── */
+.sud-upload-form {
+    margin-bottom: 8px;
+}
+
+.sud-upload-form .sud-file-input {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.sud-delete-form {
+    margin-top: 4px;
+}
+
+/* ── Loading indicator ───────────────────────────────────────────────────── */
+.sud-loading {
+    margin-left: 8px;
+    color: #555;
+}
+
   

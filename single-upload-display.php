@@ -1,7 +1,7 @@
  <?php
 /**
  * Plugin Name: Single Upload Display
- * Description: Upload a single image from the admin panel and display it on the front-end. Replaces the old one automatically.
+ * Description: Manage named upload slots and display each image with [single_upload_display tag="your-tag"]. Replaces the previous image per slot automatically.
  * Version: 1.0
  * Author: Simon Achkar
  *
@@ -14,13 +14,10 @@
 // Prevent direct file access
 if (!defined('ABSPATH')) exit; 
 
-// Constant to store/retrieve the image ID
-define('SUD_OPTION_NAME', 'sud_uploaded_image_id');
-
 // Load CSS/JS in Admin area
-add_action('admin_enqueue_scripts', function($hook) {
+add_action('admin_enqueue_scripts', function ($hook) {
     // Only load assets on our custom admin page
-    if ($hook === 'toplevel_page_sud-upload') {
+    if ($hook === 'toplevel_page_single-upload-display') {
         wp_enqueue_style('sud-admin-style', plugin_dir_url(__FILE__) . 'css/admin.css');
         wp_enqueue_script('sud-admin-script', plugin_dir_url(__FILE__) . 'js/admin.js', ['jquery'], false, true);
     }
@@ -35,7 +32,7 @@ add_action('wp_enqueue_scripts', function() {
 require_once plugin_dir_path(__FILE__) . 'includes/sud_add_shortcode.php';  
 
 // Add a custom menu item in the admin sidebar
-add_action('admin_menu', function() {
+add_action('admin_menu', function () {
     add_menu_page(
         'Single Upload Display',        // Page title
         'Single Upload',                // Menu title
